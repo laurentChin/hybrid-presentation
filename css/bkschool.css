@@ -1,0 +1,74 @@
+.os,
+.browser,
+.app,
+.webview,
+.page {
+    display: block;
+    border-radius: 4px;
+}
+
+
+.os-container, .app-container, .app-container .os {
+    perspective: 690px;
+    perspective-origin: 0% 50%;
+}
+
+.os-container .os, .os-container .browser,
+.app-container .os, .app-container .app, .app-container .webview {
+    transform-style: preserve-3d;
+    perspective-origin: 50% 50%;
+}
+
+.os {
+    position: absolute;
+    top: 50%; left: 30%;
+    width: 40vw;
+    height: 40vh;
+    background-color: rgba(255,255,255,0.4);
+    transform: rotate3d(0,1,0,30deg) translate3d(-30%, -50%, 0);
+}
+
+.os-container .browser, .os-container .app,
+.app-container .app, .app-container .webview, .app-container .page {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 0 20px rgba(0, 0 ,0 ,0.3);
+    top: 50%; left: 50%;
+}
+
+.os-container .browser,
+.app-container .app {
+    background-color: rgba(255,255,255,0.6);
+    transform: translate3d(-50%,-50%,60px);
+}
+
+.os-container .app,
+.app-container .webview {
+    background-color: rgba(255,255,255,0.8);
+    transform: translate3d(-50%,-50%,30px);
+}
+
+.app-container .page {
+    background-color: rgba(255,255,255,1);
+    transform: translate3d(-50%,-50%,10px);
+}
+
+
+.os-container span, .app-container span {
+    font-size: 12px;
+    position: absolute;
+    top: 10px; left: 10px;
+}
+
+.app-container .app {
+    transform-style: preserve-3d;
+    perspective-origin: 50% 50%;
+}
+
+#web-stack img {
+    display: block;
+    width: 300px;
+    margin: 0 auto 10px auto;
+    background-color: #fff;
+}
